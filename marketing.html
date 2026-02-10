@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing | 50 Words</title>
+    <meta name="description" content="Smart strategy and creative gets your brand noticed. Marketing services from 50 Words.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media (max-width: 480px) {
+            #content-section {
+                padding-top: 24px !important;
+                padding-bottom: 10px !important;
+            }
+            #content-section .section-grid {
+                display: flex !important;
+                flex-direction: column-reverse !important;
+                gap: 32px !important;
+            }
+            #content-section .section-image {
+                height: 300px !important;
+                width: calc(100% + 40px) !important;
+                margin-left: -20px !important;
+                margin-right: -20px !important;
+                border-radius: 12px !important;
+                overflow: hidden !important;
+                box-sizing: border-box !important;
+                margin-bottom: 8px !important;
+            }
+            #content-section .section-image video {
+                border-radius: 12px !important;
+            }
+            .services-overview .container > div[style] {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
+            }
+            .services-overview {
+                padding-top: 15px !important;
+            }
+            .services-overview + .page-section {
+                margin-top: 0 !important;
+                padding-top: 40px !important;
+            }
+            .page-section .section-headline[style*="color: white"] {
+                text-align: center !important;
+            }
+            .services-bucket {
+                padding: 20px !important;
+            }
+            .engagements-list {
+                grid-template-columns: 1fr !important;
+            }
+            .engagement-card p {
+                font-size: 15px !important;
+            }
+            .page-section .container {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+            .page-section[style*="background: #f5f3f0"] {
+                padding-top: 40px !important;
+            }
+            .hero-tagline br {
+                display: none !important;
+            }
+            div[style*="repeat(3"] {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            div[style*="padding: 80px 60px"],
+            div[style*="padding: 60px"] {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+                padding-top: 260px !important;
+                padding-bottom: 90px !important;
+            }
+            div[style*="padding: 80px 60px"] .cta-button,
+            div[style*="padding: 60px"] .cta-button {
+                margin-bottom: 100px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo-white.png" alt="50 Words" class="logo-white">
+                <img src="logo-color.png" alt="50 Words" class="logo-color">
+            </a>
+            <div class="nav-right">
+                <button class="search-toggle" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="menu-label">Menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-container">
+            <button class="search-close" aria-label="Close search">×</button>
+            <input type="text" class="search-input" placeholder="Search..." autocomplete="off">
+            <div class="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Side Menu -->
+    <div class="side-menu">
+        <div class="side-menu-content">
+            <button class="side-menu-close" aria-label="Close menu">×</button>
+            <ul class="side-menu-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="difference.html">The 50 Words Difference</a></li>
+                <li class="has-submenu">
+                    <a href="services.html">What We Do</a>
+                    <ul class="submenu">
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="marketing.html">Marketing</a></li>
+                        <li><a href="communications.html">Communications & PR</a></li>
+                        <li><a href="crisis.html">Crisis Communications</a></li>
+                        <li><a href="interim.html">Interim Management</a></li>
+                    </ul>
+                </li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="people.html">Our People</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" style="--fade-delay: 0.3s;">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line" style="animation-delay: 0.3s;">Marketing</span>
+            </h1>
+            <p class="hero-tagline" style="animation-delay: 0.3s;"><strong style="color: white;">Smart strategy and creative</strong> <br><strong>gets your brand noticed.</strong></p>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+
+    <!-- Main Content -->
+    <section class="content-section" id="content-section" style="padding-bottom: 40px;">
+        <div class="container">
+            <div class="section-grid" style="align-items: center;">
+                <div class="section-content">
+                    <h2 class="section-label">Marketing</h2>
+                    <h3 class="section-headline">Brand Strategy<br>That Stacks <span style="color: var(--brand-red); text-transform: uppercase;">UP</span></h3>
+                    <p class="section-text">No matter your goal — establishing your brand, increasing market share, launching a new product — we have the strategy, the tools and the proactive approach to get you there. We have worked with hundreds of companies and non-profits, from startups to Fortune 500 companies.</p>
+                    <p class="section-text">Among other client relationships, we have helped launch a new military jet for an aerospace and defense sector leader, helped position a newly combined immigration law firm for future growth following a merger, and helped brand and grow a multi-generational family-owned commercial finance firm.</p>
+                </div>
+                <div class="section-image" style="pointer-events: none; height: 500px; overflow: hidden; border-radius: 12px; box-shadow: 0 16px 48px rgba(0,0,0,0.2);">
+                    <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; ">
+                        <source src="_Images/BuildingBlocks.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Two Column -->
+    <section class="services-overview" style="padding: 80px 0 60px 0; margin-bottom: 0;">
+        <div class="container">
+            <style>
+                .rotate-list { list-style: none; padding: 0; margin: 0; position: relative; }
+                .rotate-list::before {
+                    content: '';
+                    position: absolute;
+                    left: 2px;
+                    top: 24px;
+                    bottom: 24px;
+                    width: 1px;
+                    background: #ccc;
+                }
+                .rotate-list li {
+                    font-size: 17px;
+                    padding: 16px 0;
+                    position: relative;
+                    padding-left: 20px;
+                    color: #ccc;
+                    transition: color 0.5s ease;
+                }
+                .rotate-list li::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 6px;
+                    height: 6px;
+                    background: #ccc;
+                    border-radius: 50%;
+                    transition: background 0.5s ease;
+                }
+                .rotate-list li.active {
+                    color: var(--brand-primary);
+                    font-weight: 600;
+                }
+                .rotate-list li.active::before {
+                    background: var(--brand-red);
+                    width: 10px;
+                    height: 10px;
+                    left: -2px;
+                }
+                .rotate-list:hover li {
+                    color: var(--brand-primary);
+                    font-weight: 600;
+                }
+                .rotate-list:hover li::before {
+                    background: var(--brand-red);
+                    width: 10px;
+                    height: 10px;
+                    left: -2px;
+                }
+            </style>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                <div style="display: flex; flex-direction: column; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 14px 32px; border-radius: 12px 12px 0 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+                        <h3 style="font-size: 28px; margin: 0; color: white;">Strategy</h3>
+                    </div>
+                    <div class="service-column" style="background: rgba(255,255,255,0.9); padding: 32px 32px; border-radius: 0 0 12px 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); flex: 1; position: relative;">
+                        <div style="position: absolute; top: 0; left: 32px; width: 0; height: 0; border-left: 14px solid transparent; border-right: 14px solid transparent; border-top: 12px solid var(--brand-red);"></div>
+                        <ul class="rotate-list" data-rotate>
+                            <li>Strategic Business Planning</li>
+                            <li>Marketing and Sales Plan Development & Execution</li>
+                            <li>Market Research</li>
+                            <li>Brand Strategy, Research & Management</li>
+                            <li>Marketing Measurement Systems</li>
+                        </ul>
+                    </div>
+                    <img src="_Images/Blocks.png" alt="Building Blocks" style="width: 100%; border-radius: 12px; margin-top: 24px; display: block; position: relative; z-index: 2;">
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 14px 32px; border-radius: 12px 12px 0 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+                        <h3 style="font-size: 28px; margin: 0; color: white;">Implementation</h3>
+                    </div>
+                    <div class="service-column" style="background: rgba(255,255,255,0.9); padding: 32px 32px; border-radius: 0 0 12px 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); flex: 1; position: relative;">
+                        <div style="position: absolute; top: 0; left: 32px; width: 0; height: 0; border-left: 14px solid transparent; border-right: 14px solid transparent; border-top: 12px solid var(--brand-red);"></div>
+                        <ul class="rotate-list" data-rotate>
+                            <li>Branding and Identity</li>
+                            <li>Copywriting & Content</li>
+                            <li>Web Design and Development</li>
+                            <li>Print Design</li>
+                            <li>Sales Force Effectiveness & Productivity</li>
+                            <li>Social Media Strategy, Content & Execution</li>
+                            <li>Tradeshow and Event Support</li>
+                            <li>Fundraising Support</li>
+                            <li>Marketing Automation, Data Analytics, Segmentation, Customer Experience Leadership</li>
+                            <li>AI Assessments and Consulting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section class="page-section" style="background: var(--brand-dark); position: relative; padding-bottom: 0; margin-bottom: 0; margin-top: -80px; padding-top: 160px;">
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-headline" style="color: white;">Outcomes</h2>
+            <div class="outcomes-grid" style="grid-template-columns: 1fr; gap: 16px;">
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Increased engagement and lead generation</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Improved sales funnel</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Increased brand awareness and loyalty</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Increased market share leading to business growth</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Effective resource allocation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Statement -->
+    <section style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);">
+        <!-- Fade overlay from Outcomes -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 200px; background: linear-gradient(to bottom, var(--brand-dark), transparent); z-index: 3; pointer-events: none;"></div>
+        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.12; z-index: 0;">
+            <source src="_Images/BuildingBlocks.mp4" type="video/mp4">
+        </video>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 800px 600px at 90% 20%, rgba(196, 30, 58, 0.35) 0%, transparent 50%), radial-gradient(ellipse 700px 700px at 10% 80%, rgba(196, 30, 58, 0.25) 0%, transparent 50%), radial-gradient(ellipse 900px 500px at 50% 50%, rgba(196, 30, 58, 0.20) 0%, transparent 60%); filter: blur(60px); animation: floatGradients 25s ease-in-out infinite; pointer-events: none; z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; text-align: center; padding: 80px 60px; width: 100%;">
+            <blockquote class="highlight-quote" style="font-size: clamp(32px, 5vw, 56px); font-style: normal; line-height: 1.2;">
+                Excellent marketing starts and ends with <span style="color: var(--brand-red);">strategy.</span>
+            </blockquote>
+            <a href="contact.html" class="cta-button" style="margin-top: 40px; display: inline-block;">Get Started</a>
+            <!-- Other Services -->
+            <h2 class="section-label center" style="color: var(--brand-red); margin-top: 80px;">Explore Our Other Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; max-width: 1100px; margin-left: auto; margin-right: auto;">
+                <a href="communications.html" class="services-bucket" style="text-decoration: none; color: inherit; text-align: left;">
+                    <h3>Communications & PR</h3>
+                    <p>Boost your image and amplify your voice. From internal communications to public relations, depend on our expertise.</p>
+                    <span style="color: var(--brand-red); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;">Learn More &rarr;</span>
+                </a>
+                <a href="crisis.html" class="services-bucket" style="text-decoration: none; color: inherit; text-align: left;">
+                    <h3>Crisis Communications</h3>
+                    <p>Expertise to navigate special situations. Rely on our deep experience to manage transformational moments.</p>
+                    <span style="color: var(--brand-red); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;">Learn More &rarr;</span>
+                </a>
+                <a href="interim.html" class="services-bucket" style="text-decoration: none; color: inherit; text-align: left;">
+                    <h3>Interim Management</h3>
+                    <p>C-level capability and skills you need to leap ahead. Our experts fill the gap when you need it most.</p>
+                    <span style="color: var(--brand-red); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;">Learn More &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Representative Engagements -->
+    <section class="page-section" style="background: #f5f3f0; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 800px 600px at 90% 20%, rgba(196, 30, 58, 0.35) 0%, transparent 50%), radial-gradient(ellipse 700px 700px at 10% 80%, rgba(196, 30, 58, 0.25) 0%, transparent 50%), radial-gradient(ellipse 900px 500px at 50% 50%, rgba(196, 30, 58, 0.20) 0%, transparent 60%); filter: blur(60px); animation: floatGradients 25s ease-in-out infinite; pointer-events: none; z-index: 0;"></div>
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 200px; background: linear-gradient(to bottom, transparent, white); z-index: 1; pointer-events: none;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-headline" style="color: var(--brand-red); text-align: center;">Representative Engagements</h2>
+            <div class="engagements-list" style="grid-template-columns: 1fr 1fr;">
+            <style>.page-section .engagements-list .engagement-card { background: rgba(255,255,255,0.8); }</style>
+                <div class="engagement-card">
+                    <p>Marketing Advisor to a <span style="font-weight: 700; background: rgba(196, 30, 58, 0.12); padding: 2px 8px; border-radius: 4px;">developer of cost-effective modular software solutions</span> for distribution centers to help clarify their market position, strengthen their value proposition, and ramp up prospect marketing, filling the sales funnel and converting visitors into customers. Developed white papers and customer stories to establish thought leadership and illustrate benefit to users; crafted marketing materials such as capabilities brochure and newsletter; and created ongoing web site and blog content. Our work improved alignment between product, sales, and marketing teams, and supported scalable growth in a highly competitive logistics technology landscape.</p>
+                </div>
+
+                <div class="engagement-card">
+                    <p>Marketing Advisor to <span style="font-weight: 700; background: rgba(196, 30, 58, 0.12); padding: 2px 8px; border-radius: 4px;">a leading independent financial services firm</span> that delivers customized financing solutions to help sharpen market positioning, clarify value proposition, and support growth across key borrower and referral segments. The ongoing engagement helps the company by crafting deal announcements, email marketing, digital and traditional advertising campaigns, social media campaigns, and blogs. In addition, we revamped the existing website to strengthen brand position and messaging while also increasing web traffic. Our work strengthened credibility with brokers, partners, and clients while driving increased demand for the company's lending products.</p>
+                </div>
+
+                <div class="engagement-card">
+                    <p>Marketing Advisor to a national <span style="font-weight: 700; background: rgba(196, 30, 58, 0.12); padding: 2px 8px; border-radius: 4px;">real estate-focused private investment management firm</span> that targets middle-market joint venture equity, preferred equity, and mezzanine debt investments. Projects included website redesign, brand and messaging refinement, marketing materials design, investor and communication support. In addition, worked to raise public image and increase coverage in trade and real estate media outlets to grow their portfolio, and advised ongoing communications efforts.</p>
+                </div>
+
+                <div class="engagement-card">
+                    <p>Marketing Advisor to a top <span style="font-weight: 700; background: rgba(196, 30, 58, 0.12); padding: 2px 8px; border-radius: 4px;">special situations focused investment banking firm</span> serving clients in the United States and Europe. The 15+ year engagement includes crafting deal announcements, email marketing, digital and traditional advertising campaigns, social media campaigns and event planning. In addition, we redesigned the website and created compelling content highlighting the firm and its professionals' innovation and success using case studies, testimonials, and quantifiable data for award nominations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to get started?</h2>
+                <p>Let's have a conversation about your marketing needs.</p>
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo-white.png" alt="50 Words" class="footer-logo">
+                </div>
+                <div class="footer-nav">
+                    <h4><a href="services.html" style="color: inherit; text-decoration: none;">Services</a></h4>
+                    <ul>
+                        <li><a href="marketing.html">Marketing</a></li>
+                        <li><a href="communications.html">Communications</a></li>
+                        <li><a href="crisis.html">Crisis Communications</a></li>
+                        <li><a href="interim.html">Interim Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="difference.html">The 50 Words Difference</a></li>
+                        <li><a href="people.html">Our People</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Phone: <a href="tel:6106315702">(610) 631-5702</a></p>
+                    <p>Email: <a href="mailto:info@50words.com">info@50words.com</a></p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/50-words-llc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 50 Words LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Check scroll position on page load
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        }
+
+        // Full-Screen Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sideMenu = document.querySelector('.side-menu');
+        const sideMenuClose = document.querySelector('.side-menu-close');
+
+        function openMenu() {
+            sideMenu.classList.remove('closing');
+            sideMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sideMenu.classList.add('closing');
+            sideMenu.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                sideMenu.classList.remove('closing');
+                document.querySelectorAll('.has-submenu').forEach(el => el.classList.remove('open'));
+            }, 500);
+        }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', openMenu);
+        }
+
+        if (sideMenuClose) {
+            sideMenuClose.addEventListener('click', closeMenu);
+        }
+
+        // Search Toggle
+        const searchToggle = document.querySelector('.search-toggle');
+        const searchOverlay = document.querySelector('.search-overlay');
+        const searchClose = document.querySelector('.search-close');
+        const searchInput = document.querySelector('.search-input');
+
+        if (searchToggle) {
+            searchToggle.addEventListener('click', () => {
+                searchOverlay.classList.add('active');
+                if (searchInput) {
+                    searchInput.focus();
+                    searchInput.value = '';
+                    document.querySelector('.search-results').innerHTML = '';
+                }
+            });
+        }
+
+        if (searchClose) {
+            searchClose.addEventListener('click', () => {
+                searchOverlay.classList.remove('active');
+            });
+        }
+
+        // Site Search Data
+        const sitePages = [
+            { title: 'Home', url: 'index.html', keywords: 'home main strategy communications marketing' },
+            { title: 'The 50 Words Difference', url: 'difference.html', keywords: 'difference about strategy philosophy why work with us expertise solutions results' },
+            { title: 'What We Do - Services', url: 'services.html', keywords: 'services what we do offerings' },
+            { title: 'Marketing', url: 'marketing.html', keywords: 'marketing brand strategy sales branding identity web design social media' },
+            { title: 'Communications & Public Relations', url: 'communications.html', keywords: 'communications public relations PR media relations press corporate internal' },
+            { title: 'Crisis Communications', url: 'crisis.html', keywords: 'crisis communications emergency restructuring bankruptcy reputation management' },
+            { title: 'Interim Management', url: 'interim.html', keywords: 'interim management CMO CCO CBO fractional executive leadership' },
+            { title: 'Industries', url: 'industries.html', keywords: 'industries sectors markets' },
+            { title: 'Consumer Products and Services', url: 'industry-consumer.html', keywords: 'consumer products services retail hospitality' },
+            { title: 'Defense', url: 'industry-defense.html', keywords: 'defense military aerospace government' },
+            { title: 'Distribution', url: 'industry-distribution.html', keywords: 'distribution logistics supply chain' },
+            { title: 'Education', url: 'industry-education.html', keywords: 'education schools universities higher ed' },
+            { title: 'Financial Services', url: 'industry-financial.html', keywords: 'financial services banking finance lending investment' },
+            { title: 'Healthcare', url: 'industry-healthcare.html', keywords: 'healthcare medical hospital health care providers' },
+            { title: 'Manufacturing', url: 'industry-manufacturing.html', keywords: 'manufacturing industrial production' },
+            { title: 'Non-Profit', url: 'industry-nonprofit.html', keywords: 'non-profit nonprofit charity foundation' },
+            { title: 'Professional and Business Services', url: 'industry-professional.html', keywords: 'professional services business consulting law accounting' },
+            { title: 'Private Equity', url: 'industry-privateequity.html', keywords: 'private equity PE investment portfolio companies' },
+            { title: 'Technology', url: 'industry-technology.html', keywords: 'technology tech software IT digital' },
+            { title: 'Trade Associations', url: 'industry-trade.html', keywords: 'trade associations membership organizations' },
+            { title: 'Our People', url: 'people.html', keywords: 'people team staff bios Linda Emily Jackie Tiffany Colin Lisa Diane' },
+            { title: 'Contact Us', url: 'contact.html', keywords: 'contact email phone address get in touch' }
+        ];
+
+        // Search functionality
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                const resultsContainer = document.querySelector('.search-results');
+                
+                if (query.length < 2) {
+                    resultsContainer.innerHTML = '';
+                    return;
+                }
+
+                const matches = sitePages.filter(page => 
+                    page.title.toLowerCase().includes(query) || 
+                    page.keywords.toLowerCase().includes(query)
+                );
+
+                if (matches.length > 0) {
+                    resultsContainer.innerHTML = matches.map(page => 
+                        `<a href="${page.url}" class="search-result-item">${page.title}</a>`
+                    ).join('');
+                } else {
+                    resultsContainer.innerHTML = '<div class="search-no-results">No results found</div>';
+                }
+            });
+
+            // Enter key to go to first result
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const firstResult = document.querySelector('.search-result-item');
+                    if (firstResult) {
+                        window.location.href = firstResult.getAttribute('href');
+                    }
+                }
+            });
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (searchOverlay) searchOverlay.classList.remove('active');
+                if (sideMenu && sideMenu.classList.contains('active')) {
+                    closeMenu();
+                }
+            }
+        });
+
+        // Submenu toggle
+        document.querySelectorAll('.has-submenu > a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                link.parentElement.classList.toggle('open');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-content, .section-image').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Rotating list highlight animation
+        document.querySelectorAll('[data-rotate]').forEach(list => {
+            const items = list.querySelectorAll('li');
+            let currentIndex = 0;
+            let paused = false;
+
+            list.addEventListener('mouseenter', () => { paused = true; });
+            list.addEventListener('mouseleave', () => { paused = false; });
+
+            function rotateHighlight() {
+                if (!paused) {
+                    items.forEach(item => item.classList.remove('active'));
+                    items[currentIndex].classList.add('active');
+                    currentIndex = (currentIndex + 1) % items.length;
+                }
+            }
+
+            rotateHighlight();
+            setInterval(rotateHighlight, 1500);
+        });
+
+        // Force autoplay all videos (especially for mobile)
+        function forcePlayVideos() {
+            document.querySelectorAll('video').forEach(v => {
+                v.play().catch(() => {});
+            });
+        }
+        forcePlayVideos();
+        document.addEventListener('touchstart', forcePlayVideos, { once: true });
+        document.addEventListener('scroll', forcePlayVideos, { once: true });
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) forcePlayVideos();
+        });
+    </script>
+</body>
+</html>

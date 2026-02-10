@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crisis Communications | 50 Words</title>
+    <meta name="description" content="Expertise to navigate special situations. Crisis communications services from 50 Words.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media (max-width: 480px) {
+            #content-section {
+                padding-top: 24px !important;
+                padding-bottom: 0 !important;
+            }
+            #content-section .section-grid {
+                display: flex !important;
+                flex-direction: column-reverse !important;
+                gap: 32px !important;
+            }
+            #content-section .section-image {
+                height: 300px !important;
+                width: calc(100% + 40px) !important;
+                margin-left: -20px !important;
+                margin-right: -20px !important;
+                border-radius: 12px !important;
+                overflow: hidden !important;
+                box-sizing: border-box !important;
+                margin-bottom: 8px !important;
+            }
+            #content-section .section-image video {
+                border-radius: 12px !important;
+            }
+            div[style*="repeat(3"] {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            div[style*="padding: 80px 60px"],
+            div[style*="padding: 60px"] {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+            .services-bucket {
+                padding: 20px !important;
+            }
+            .engagements-list {
+                grid-template-columns: 1fr !important;
+            }
+            .engagement-card p {
+                font-size: 15px !important;
+            }
+            .page-section .container {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+            .page-section[style*="background: #f5f3f0"] {
+                padding-top: 40px !important;
+            }
+            .hero-tagline br {
+                display: none !important;
+            }
+            section[style*="padding: 60px 60px 80px 60px"] {
+                padding: 24px 16px 40px !important;
+            }
+            section[style*="padding: 60px 60px 80px 60px"] > div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+                max-width: 100% !important;
+            }
+            section[style*="padding: 60px 60px 80px 60px"] div[style*="border-radius: 24px"] div[style*="padding: 40px 40px 50px"] {
+                padding: 24px 16px 32px !important;
+            }
+            section[style*="padding: 60px 60px 80px 60px"] div[style*="border-radius: 24px"] li {
+                font-size: 15px !important;
+                padding: 10px 14px !important;
+            }
+            section[style*="padding: 60px 60px 80px 60px"] div[style*="min-height: 0"] {
+                display: none !important;
+            }
+            section[style*="padding: 60px 60px 80px 60px"] h3 {
+                font-size: 22px !important;
+            }
+            section[style*="padding: 60px 60px 80px 60px"] + .page-section {
+                padding-top: 20px !important;
+            }
+            .page-section .section-headline[style*="color: white"] {
+                text-align: center !important;
+            }
+            div[style*="padding: 80px 60px"],
+            div[style*="padding: 60px"][style*="z-index: 2"] {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+                padding-top: 260px !important;
+                padding-bottom: 90px !important;
+            }
+            div[style*="padding: 80px 60px"] .cta-button,
+            div[style*="padding: 60px"][style*="z-index: 2"] .cta-button {
+                margin-bottom: 100px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo-white.png" alt="50 Words" class="logo-white">
+                <img src="logo-color.png" alt="50 Words" class="logo-color">
+            </a>
+            <div class="nav-right">
+                <button class="search-toggle" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="menu-label">Menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-container">
+            <button class="search-close" aria-label="Close search">×</button>
+            <input type="text" class="search-input" placeholder="Search..." autocomplete="off">
+            <div class="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Side Menu -->
+    <div class="side-menu">
+        <div class="side-menu-content">
+            <button class="side-menu-close" aria-label="Close menu">×</button>
+            <ul class="side-menu-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="difference.html">The 50 Words Difference</a></li>
+                <li class="has-submenu">
+                    <a href="services.html">What We Do</a>
+                    <ul class="submenu">
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="marketing.html">Marketing</a></li>
+                        <li><a href="communications.html">Communications & PR</a></li>
+                        <li><a href="crisis.html">Crisis Communications</a></li>
+                        <li><a href="interim.html">Interim Management</a></li>
+                    </ul>
+                </li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="people.html">Our People</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" style="--fade-delay: 0.3s;">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line" style="animation-delay: 0.3s;">Crisis Communications</span>
+            </h1>
+            <p class="hero-tagline" style="animation-delay: 0.3s;"><strong style="color: white;">Expertise to navigate</strong> <br><strong>special situations.</strong></p>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+
+    <!-- Main Content -->
+    <section class="content-section" id="content-section">
+        <div class="container">
+            <div class="section-grid" style="align-items: stretch;">
+                <div class="section-content">
+                    <h2 class="section-label">Crisis Communications</h2>
+                    <h3 class="section-headline">Navigate Critical Moments with Confidence</h3>
+                    <p class="section-text">At your most critical moments, you don't have time to guess at the right strategy. Rely on our deep experience and strategy to manage transformational situations, maintain trust and maximize brand value in many different circumstances.</p>
+                    <p class="section-text">Among other client relationships, we have guided healthcare organizations through the COVID-19 pandemic, alleviating public fears and providing valuable communication updates; helped an early learning hands-on and digital learning program company communicate with stakeholders through a bankruptcy filing; and assisted an early learning center with reputation management and brand image repair following negative social media posts related to school closures.</p>
+                </div>
+                <div class="section-image" style="pointer-events: none; overflow: hidden; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.15); align-self: stretch;">
+                    <video id="crisisVideo" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; ">
+                        <source src="_Images/BallMaze.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Situations & Services -->
+    <section style="background: var(--brand-dark); padding: 60px 60px 80px 60px; position: relative; overflow: hidden;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 97%; margin: 0 auto;">
+            <!-- Situations + Image -->
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+                <div style="border-radius: 24px; overflow: hidden;">
+                    <div style="background: var(--brand-red); padding: 14px 32px;">
+                        <h3 style="font-size: 28px; margin: 0; color: white; text-align: center;">Situations Include</h3>
+                    </div>
+                    <div style="background: white; padding: 40px 40px 50px; position: relative;">
+                        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 14px solid transparent; border-right: 14px solid transparent; border-top: 12px solid var(--brand-red);"></div>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                            <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Corporate Restructuring and Bankruptcy</li>
+                            <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Mergers and Acquisitions</li>
+                            <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Divestitures</li>
+                            <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Human Resources Rightsizing</li>
+                            <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Fraud, Embezzlement and Misappropriation</li>
+                            <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Governance Failures</li>
+                            <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Illegal/Unethical Practices</li>
+                            <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Leadership Transitions</li>
+                            <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Cybersecurity Breaches</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="flex: 1; border-radius: 24px; overflow: hidden; position: relative; min-height: 0;"><img src="_Images/_Industries/Professional.jpg" alt="Professional" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(100%);"></div>
+            </div>
+            <!-- Services -->
+            <div style="border-radius: 24px; overflow: hidden;">
+                <div style="background: var(--brand-red); padding: 14px 32px;">
+                    <h3 style="font-size: 28px; margin: 0; color: white; text-align: center;">Comprehensive Services</h3>
+                </div>
+                <div style="background: white; padding: 40px 40px 50px; position: relative; border-radius: 0 0 24px 24px;">
+                    <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 14px solid transparent; border-right: 14px solid transparent; border-top: 12px solid var(--brand-red);"></div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Risk Assessments</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Crisis Communications Strategy Development</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Crisis Plans</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Crisis Response Manuals</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Crisis Management Training and Simulations</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Media Training</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Message Development</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Editorial Services (Press Materials, Statements)</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Media Relations</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Social Media Management</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Media Monitoring (Broadcast, Print, Online)</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Online Reputation Management</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Impact Assessments</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Stakeholder Communications</li>
+                        <li style="font-size: 17px; color: var(--text-secondary); padding: 14px 20px; background: #f5f3f0; border-radius: 8px;">Reputation Repair and Restoration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section class="page-section" style="background: var(--brand-dark); position: relative; padding-bottom: 0; margin-bottom: 0;">
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-headline" style="color: white;">Outcomes</h2>
+            <div class="outcomes-grid" style="grid-template-columns: 1fr; gap: 16px;">
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Maintain management credibility and support of key constituencies throughout the process</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Preserve brand and asset value</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Reassure key audiences</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Restore the public's confidence</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Provide measured and timely communications</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: stretch; gap: 0;">
+                    <div style="background: var(--brand-red); padding: 16px 20px; border-radius: 8px 0 0 8px; display: flex; align-items: center;"><span style="color: white; font-weight: bold; font-size: 18px;">&#10003;</span></div>
+                    <div class="outcome-item" style="background: rgba(255,255,255,0.05); border-radius: 0 8px 8px 0; flex: 1;">
+                        <span style="color: rgba(255,255,255,0.8);">Limit adverse publicity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Statement -->
+    <section style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);">
+        <!-- Fade overlay from Outcomes -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 200px; background: linear-gradient(to bottom, var(--brand-dark), transparent); z-index: 3; pointer-events: none;"></div>
+        <video autoplay muted loop playsinline id="statementVideo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; z-index: 0;">
+            <source src="_Images/BallMaze.mp4" type="video/mp4">
+        </video>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 800px 600px at 90% 20%, rgba(196, 30, 58, 0.35) 0%, transparent 50%), radial-gradient(ellipse 700px 700px at 10% 80%, rgba(196, 30, 58, 0.25) 0%, transparent 50%), radial-gradient(ellipse 900px 500px at 50% 50%, rgba(196, 30, 58, 0.20) 0%, transparent 60%); filter: blur(60px); animation: floatGradients 25s ease-in-out infinite; pointer-events: none; z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; text-align: center; padding: 60px;">
+            <blockquote class="highlight-quote" style="font-size: clamp(32px, 5vw, 56px); font-style: normal; line-height: 1.2;">
+                Through the development and execution of an effective crisis communications strategy, we can minimize the negative impact of a <span style="color: var(--brand-red);">crisis.</span>
+            </blockquote>
+            <a href="contact.html" class="cta-button" style="margin-top: 40px; display: inline-block;">Get Started</a>
+            <!-- Other Services -->
+            <h2 class="section-label center" style="color: var(--brand-red); margin-top: 80px;">Explore Our Other Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; max-width: 1100px; margin-left: auto; margin-right: auto;">
+                <a href="marketing.html" class="services-bucket" style="text-decoration: none; color: inherit; text-align: left;">
+                    <h3>Marketing</h3>
+                    <p>Smart strategy and creative gets your brand noticed. We have the tools and proactive approach to get you there.</p>
+                    <span style="color: var(--brand-red); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;">Learn More &rarr;</span>
+                </a>
+                <a href="communications.html" class="services-bucket" style="text-decoration: none; color: inherit; text-align: left;">
+                    <h3>Communications & PR</h3>
+                    <p>Boost your image and amplify your voice. From internal communications to public relations, depend on our expertise.</p>
+                    <span style="color: var(--brand-red); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;">Learn More &rarr;</span>
+                </a>
+                <a href="interim.html" class="services-bucket" style="text-decoration: none; color: inherit; text-align: left;">
+                    <h3>Interim Management</h3>
+                    <p>C-level capability and skills you need to leap ahead. Our experts fill the gap when you need it most.</p>
+                    <span style="color: var(--brand-red); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;">Learn More &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Representative Engagements -->
+    <section class="page-section" style="background: #f5f3f0; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 800px 600px at 90% 20%, rgba(196, 30, 58, 0.35) 0%, transparent 50%), radial-gradient(ellipse 700px 700px at 10% 80%, rgba(196, 30, 58, 0.25) 0%, transparent 50%), radial-gradient(ellipse 900px 500px at 50% 50%, rgba(196, 30, 58, 0.20) 0%, transparent 60%); filter: blur(60px); animation: floatGradients 25s ease-in-out infinite; pointer-events: none; z-index: 0;"></div>
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 200px; background: linear-gradient(to bottom, transparent, white); z-index: 1; pointer-events: none;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-headline" style="color: var(--brand-red); text-align: center;">Representative Engagements</h2>
+            <div class="engagements-list" style="grid-template-columns: 1fr 1fr 1fr;">
+            <style>.page-section .engagements-list .engagement-card { background: rgba(255,255,255,0.8); }</style>
+                <div class="engagement-card">
+                    <p>Strategic Communications Advisor to ONE Aviation Corporation, et al., <span style="font-weight: 700; background: rgba(196, 30, 58, 0.12); padding: 2px 8px; border-radius: 4px;">New Mexico-based aviation entities</span> which filed for Chapter 11 bankruptcy protection in the United States Bankruptcy Court for the District of Delaware. Developed and executed the communications plan, created stakeholder communications, and provided ongoing communications with the media and local government officials.</p>
+                </div>
+
+                <div class="engagement-card">
+                    <p>Crisis Communications Advisor to <span style="font-weight: 700; background: rgba(196, 30, 58, 0.12); padding: 2px 8px; border-radius: 4px;">New Jersey-based manufacturer in the food industry</span>. The Company's former CEO was indicted for money laundering and defrauding the state of New Jersey. Created and implemented a crisis communications plan for all stakeholders with the Chief Restructuring Officer, Legal Counsel and other Interim Leaders, developed communication materials, provided on-site support, and provided media training.</p>
+                </div>
+
+                <div class="engagement-card">
+                    <p>Strategic Communications Advisor to the <span style="font-weight: 700; background: rgba(196, 30, 58, 0.12); padding: 2px 8px; border-radius: 4px;">Court-Appointed Receiver and operator of a chain of skilled nursing facilities in the Midwestern United States.</span> Developed media responses in coordination with the Receiver and Legal Counsel during the COVID-19 pandemic.</p>
+                </div>
+            </div>
+            <div class="engagements-list" style="grid-template-columns: 1fr 1fr; margin-top: 24px;">
+                <div class="engagement-card" style="background: rgba(255,255,255,0.8);">
+                    <p>Strategic Communications Advisor to the Chief Executive Officer and Chief Restructuring Advisor of Center City Healthcare, LLC and certain of its subsidiaries, which filed for Chapter 11 bankruptcy protection. Developed and executed strategic communications plans and timelines in coordination with Restructuring Counsel, the Chief Restructuring Officer and the Chief Executive Officer under a compressed timeline. Developed communications materials to 20+ stakeholder groups related to the bankruptcy and orderly wind-down of major safety-net institution Hahnemann University Hospital, a <span style="font-weight: 700; background: rgba(196, 30, 58, 0.12); padding: 2px 8px; border-radius: 4px;">496-bed teaching hospital in Philadelphia</span> where more than 500 medical residents and fellows trained, and the Section 363 sale of St. Christopher's Hospital for Children, a safety-net <span style="font-weight: 700; background: rgba(196, 30, 58, 0.12); padding: 2px 8px; border-radius: 4px;">188-bed pediatric hospital in Philadelphia</span>. Provided onsite support at both hospitals during the bankruptcy.</p>
+                </div>
+
+                <div class="engagement-card" style="background: rgba(255,255,255,0.8);">
+                    <p>Strategic Communications Advisor to Guardian Elder Care at Johnstown, LLC d/b/a Richland Healthcare and Rehabilitation Center and certain of its affiliates, an owner and operator of <span style="font-weight: 700; background: rgba(196, 30, 58, 0.12); padding: 2px 8px; border-radius: 4px;">skilled nursing facilities and related pharmacy and rehabilitation businesses in Pennsylvania and West Virginia,</span> which filed for Chapter 11 bankruptcy protection. Developed and executed strategic communications plans and timelines in coordination with the Chief Restructuring Officer, Legal Counsel, and Chief Executive Officer during the divestitures and transfers of the operations of its facilities, ensuring continued services for its residents and preserving critical healthcare jobs. Guided internal and external communications, including communications with clinical and non-clinical staff, board of directors, community partners, media, and referring institutions. Provided onsite support as needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to get started?</h2>
+                <p>Let's have a conversation about your crisis communications needs.</p>
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo-white.png" alt="50 Words" class="footer-logo">
+                </div>
+                <div class="footer-nav">
+                    <h4><a href="services.html" style="color: inherit; text-decoration: none;">Services</a></h4>
+                    <ul>
+                        <li><a href="marketing.html">Marketing</a></li>
+                        <li><a href="communications.html">Communications</a></li>
+                        <li><a href="crisis.html">Crisis Communications</a></li>
+                        <li><a href="interim.html">Interim Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="difference.html">The 50 Words Difference</a></li>
+                        <li><a href="people.html">Our People</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Phone: <a href="tel:6106315702">(610) 631-5702</a></p>
+                    <p>Email: <a href="mailto:info@50words.com">info@50words.com</a></p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/50-words-llc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 50 Words LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Check scroll position on page load
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        }
+
+        // Full-Screen Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sideMenu = document.querySelector('.side-menu');
+        const sideMenuClose = document.querySelector('.side-menu-close');
+
+        function openMenu() {
+            sideMenu.classList.remove('closing');
+            sideMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sideMenu.classList.add('closing');
+            sideMenu.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                sideMenu.classList.remove('closing');
+                document.querySelectorAll('.has-submenu').forEach(el => el.classList.remove('open'));
+            }, 500);
+        }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', openMenu);
+        }
+
+        if (sideMenuClose) {
+            sideMenuClose.addEventListener('click', closeMenu);
+        }
+
+        // Search Toggle
+        const searchToggle = document.querySelector('.search-toggle');
+        const searchOverlay = document.querySelector('.search-overlay');
+        const searchClose = document.querySelector('.search-close');
+        const searchInput = document.querySelector('.search-input');
+
+        if (searchToggle) {
+            searchToggle.addEventListener('click', () => {
+                searchOverlay.classList.add('active');
+                if (searchInput) {
+                    searchInput.focus();
+                    searchInput.value = '';
+                    document.querySelector('.search-results').innerHTML = '';
+                }
+            });
+        }
+
+        if (searchClose) {
+            searchClose.addEventListener('click', () => {
+                searchOverlay.classList.remove('active');
+            });
+        }
+
+        // Site Search Data
+        const sitePages = [
+            { title: 'Home', url: 'index.html', keywords: 'home main strategy communications marketing' },
+            { title: 'The 50 Words Difference', url: 'difference.html', keywords: 'difference about strategy philosophy why work with us expertise solutions results' },
+            { title: 'What We Do - Services', url: 'services.html', keywords: 'services what we do offerings' },
+            { title: 'Marketing', url: 'marketing.html', keywords: 'marketing brand strategy sales branding identity web design social media' },
+            { title: 'Communications & Public Relations', url: 'communications.html', keywords: 'communications public relations PR media relations press corporate internal' },
+            { title: 'Crisis Communications', url: 'crisis.html', keywords: 'crisis communications emergency restructuring bankruptcy reputation management' },
+            { title: 'Interim Management', url: 'interim.html', keywords: 'interim management CMO CCO CBO fractional executive leadership' },
+            { title: 'Industries', url: 'industries.html', keywords: 'industries sectors markets' },
+            { title: 'Consumer Products and Services', url: 'industry-consumer.html', keywords: 'consumer products services retail hospitality' },
+            { title: 'Defense', url: 'industry-defense.html', keywords: 'defense military aerospace government' },
+            { title: 'Distribution', url: 'industry-distribution.html', keywords: 'distribution logistics supply chain' },
+            { title: 'Education', url: 'industry-education.html', keywords: 'education schools universities higher ed' },
+            { title: 'Financial Services', url: 'industry-financial.html', keywords: 'financial services banking finance lending investment' },
+            { title: 'Healthcare', url: 'industry-healthcare.html', keywords: 'healthcare medical hospital health care providers' },
+            { title: 'Manufacturing', url: 'industry-manufacturing.html', keywords: 'manufacturing industrial production' },
+            { title: 'Non-Profit', url: 'industry-nonprofit.html', keywords: 'non-profit nonprofit charity foundation' },
+            { title: 'Professional and Business Services', url: 'industry-professional.html', keywords: 'professional services business consulting law accounting' },
+            { title: 'Private Equity', url: 'industry-privateequity.html', keywords: 'private equity PE investment portfolio companies' },
+            { title: 'Technology', url: 'industry-technology.html', keywords: 'technology tech software IT digital' },
+            { title: 'Trade Associations', url: 'industry-trade.html', keywords: 'trade associations membership organizations' },
+            { title: 'Our People', url: 'people.html', keywords: 'people team staff bios Linda Emily Jackie Tiffany Colin Lisa Diane' },
+            { title: 'Contact Us', url: 'contact.html', keywords: 'contact email phone address get in touch' }
+        ];
+
+        // Search functionality
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                const resultsContainer = document.querySelector('.search-results');
+                
+                if (query.length < 2) {
+                    resultsContainer.innerHTML = '';
+                    return;
+                }
+
+                const matches = sitePages.filter(page => 
+                    page.title.toLowerCase().includes(query) || 
+                    page.keywords.toLowerCase().includes(query)
+                );
+
+                if (matches.length > 0) {
+                    resultsContainer.innerHTML = matches.map(page => 
+                        `<a href="${page.url}" class="search-result-item">${page.title}</a>`
+                    ).join('');
+                } else {
+                    resultsContainer.innerHTML = '<div class="search-no-results">No results found</div>';
+                }
+            });
+
+            // Enter key to go to first result
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const firstResult = document.querySelector('.search-result-item');
+                    if (firstResult) {
+                        window.location.href = firstResult.getAttribute('href');
+                    }
+                }
+            });
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (searchOverlay) searchOverlay.classList.remove('active');
+                if (sideMenu && sideMenu.classList.contains('active')) {
+                    closeMenu();
+                }
+            }
+        });
+
+        // Submenu toggle
+        document.querySelectorAll('.has-submenu > a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                link.parentElement.classList.toggle('open');
+            });
+        });
+
+        // Slow down videos
+        const crisisVideo = document.getElementById('crisisVideo');
+        if (crisisVideo) { crisisVideo.playbackRate = 0.5; }
+        const statementVideo = document.getElementById('statementVideo');
+        if (statementVideo) { statementVideo.playbackRate = 0.5; }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-content, .section-image').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Force autoplay all videos (especially for mobile)
+        function forcePlayVideos() {
+            document.querySelectorAll('video').forEach(v => {
+                v.play().catch(() => {});
+            });
+        }
+        forcePlayVideos();
+        document.addEventListener('touchstart', forcePlayVideos, { once: true });
+        document.addEventListener('scroll', forcePlayVideos, { once: true });
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) forcePlayVideos();
+        });
+    </script>
+</body>
+</html>

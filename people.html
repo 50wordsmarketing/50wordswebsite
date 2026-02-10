@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our People | 50 Words</title>
+    <meta name="description" content="Meet the experienced professionals at 50 Words who bring decades of expertise in strategic communications, marketing, and public relations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .team-card-new {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .team-card-new.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .mobile-br {
+            display: none;
+        }
+        @media (max-width: 480px) {
+            html, body {
+                overflow-x: hidden;
+            }
+            .page-header {
+                padding: 120px 12px 90px !important;
+                min-height: 100vh !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                overflow: hidden !important;
+            }
+            .page-header .container {
+                max-width: 100% !important;
+                padding: 0 30px !important;
+            }
+            .page-header .container > div[style] {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
+            }
+            .page-header h1 {
+                font-size: 32px !important;
+            }
+            .people-tagline {
+                font-size: 16px !important;
+            }
+            .people-tagline br.mobile-br {
+                display: inline !important;
+            }
+            .page-header p[style*="font-size: 18px"] {
+                font-size: 15px !important;
+            }
+            .team-section-new {
+                padding: 40px 0 30px !important;
+                overflow: hidden !important;
+            }
+            .team-section-new .container {
+                max-width: 100% !important;
+                padding: 0 12px !important;
+            }
+            .team-grid-new {
+                margin-top: 0 !important;
+                padding: 0 30px !important;
+                gap: 20px !important;
+                grid-template-columns: 1fr !important;
+            }
+            .team-card-content {
+                padding: 8px 16px 16px !important;
+            }
+            .team-card-content h3 {
+                font-size: 18px !important;
+            }
+            .team-card-title {
+                font-size: 14px !important;
+            }
+            .cta-section {
+                padding: 10px 5px !important;
+            }
+            .cta-section .container {
+                padding: 35px 24px !important;
+                border-radius: 16px !important;
+            }
+            .cta-content h2 {
+                font-size: 28px !important;
+            }
+            .cta-content p {
+                font-size: 14px !important;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+                text-align: center !important;
+                gap: 28px !important;
+            }
+            .footer-social {
+                justify-content: center !important;
+            }
+            .footer {
+                padding: 50px 0 30px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo-white.png" alt="50 Words" class="logo-white">
+                <img src="logo-color.png" alt="50 Words" class="logo-color">
+            </a>
+            <div class="nav-right">
+                <button class="search-toggle" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="menu-label">Menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-container">
+            <button class="search-close" aria-label="Close search">×</button>
+            <input type="text" class="search-input" placeholder="Search..." autocomplete="off">
+            <div class="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Side Menu -->
+    <div class="side-menu">
+        <div class="side-menu-content">
+            <button class="side-menu-close" aria-label="Close menu">×</button>
+            <ul class="side-menu-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="difference.html">The 50 Words Difference</a></li>
+                <li class="has-submenu">
+                    <a href="services.html">What We Do</a>
+                    <ul class="submenu">
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="marketing.html">Marketing</a></li>
+                        <li><a href="communications.html">Communications & PR</a></li>
+                        <li><a href="crisis.html">Crisis Communications</a></li>
+                        <li><a href="interim.html">Interim Management</a></li>
+                    </ul>
+                </li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="people.html">Our People</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-overlay"></div>
+
+    <!-- Page Header -->
+    <header class="page-header difference-header" style="padding: 180px 80px 180px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: visible;">
+        <!-- Background Video -->
+        <video id="peopleHeaderVideo" autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.25; z-index: 0; filter: grayscale(100%) brightness(0.8);">
+            <source src="_Images/PeopleVideo.mp4" type="video/mp4">
+        </video>
+        <!-- Black overlay -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+        <!-- Red gradient overlay -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 800px 600px at 90% 20%, rgba(196, 30, 58, 0.35) 0%, transparent 50%), radial-gradient(ellipse 700px 700px at 10% 80%, rgba(196, 30, 58, 0.25) 0%, transparent 50%), radial-gradient(ellipse 900px 500px at 50% 50%, rgba(196, 30, 58, 0.20) 0%, transparent 60%); filter: blur(60px); animation: floatGradients 25s ease-in-out infinite; pointer-events: none; z-index: 2;"></div>
+        <div class="container" style="position: relative; z-index: 3;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <!-- Left Column -->
+                <div style="text-align: left;">
+                    <h1 style="color: white; margin-bottom: 16px;">Our People</h1>
+                    <p class="people-tagline" style="color: rgba(255, 255, 255, 0.9);">Real People with <br class="mobile-br"><strong>Real Expertise</strong></p>
+                </div>
+                <!-- Right Column -->
+                <div style="text-align: left;">
+                    <p style="color: rgba(255, 255, 255, 0.85); font-size: 18px; line-height: 1.7; margin: 0;">Our senior professionals have helped hundreds of clients navigate crises, raise their public profile, build brand strength, solidify customer bases, and boost bottom lines. We have worked in, and for, a wide range of enterprises from startups to Fortune 500 companies and across a diverse array of industries, including healthcare, financial services, professional services and technology.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Team Grid -->
+    <section class="team-section-new" style="background: white; padding: 80px 5px 100px; position: relative; overflow: visible;">
+        <div class="container" style="max-width: 97%; margin: 0 auto;">
+            <div class="team-grid-new" style="margin-top: -140px;">
+                <!-- Linda McDonough -->
+                <a href="bio-linda-mcdonough.html" class="team-card-new">
+                    <div class="team-card-image">
+                        <img src="_Headshots/Linda-NEW.png" alt="Linda McDonough">
+                        <div class="team-card-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Linda McDonough</h3>
+                        <p class="team-card-title">Founder, President</p>
+                    </div>
+                </a>
+
+                <!-- Emily Dreskin -->
+                <a href="bio-emily-dreskin.html" class="team-card-new">
+                    <div class="team-card-image">
+                        <img src="_Headshots/Emily-NEW.png" alt="Emily Dreskin">
+                        <div class="team-card-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Emily Dreskin</h3>
+                        <p class="team-card-title">Director of Public Relations</p>
+                    </div>
+                </a>
+
+                <!-- Jacqueline Giuttari -->
+                <a href="bio-jacqueline-giuttari.html" class="team-card-new">
+                    <div class="team-card-image">
+                        <img src="_Headshots/Jacqueline-NEW.png.jpg" alt="Jacqueline Giuttari">
+                        <div class="team-card-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Jacqueline Giuttari</h3>
+                        <p class="team-card-title">Creative Director</p>
+                    </div>
+                </a>
+
+                <!-- Tiffany Kearney -->
+                <a href="bio-tiffany-kearney.html" class="team-card-new">
+                    <div class="team-card-image">
+                        <img src="_Headshots/Tiffany-NEW.jpg" alt="Tiffany Kearney">
+                        <div class="team-card-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Tiffany Kearney</h3>
+                        <p class="team-card-title">Director, Marketing and Operations</p>
+                    </div>
+                </a>
+
+                <!-- Colin McDonough -->
+                <a href="bio-colin-mcdonough.html" class="team-card-new">
+                    <div class="team-card-image">
+                        <img src="_Headshots/Colin-NEW.png" alt="Colin McDonough">
+                        <div class="team-card-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Colin McDonough</h3>
+                        <p class="team-card-title">Director of Business Development and Technology Partnerships</p>
+                    </div>
+                </a>
+
+                <!-- Lisa Rubano-Volansky -->
+                <a href="bio-lisa-rubano-volansky.html" class="team-card-new">
+                    <div class="team-card-image">
+                        <img src="_Headshots/Lisa-NEW.png" alt="Lisa Rubano-Volansky">
+                        <div class="team-card-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Lisa Rubano-Volansky</h3>
+                        <p class="team-card-title">Marketing Director and Co-Founder of 50 Words</p>
+                    </div>
+                </a>
+
+                <!-- Diane M. Sterrett -->
+                <a href="bio-diane-sterrett.html" class="team-card-new">
+                    <div class="team-card-image">
+                        <img src="_Headshots/Diane-NEW.png" alt="Diane M. Sterrett">
+                        <div class="team-card-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Diane M. Sterrett</h3>
+                        <p class="team-card-title">Content Director</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to work with our team?</h2>
+                <p>Let's have a conversation about how we can help you achieve your goals.</p>
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo-white.png" alt="50 Words" class="footer-logo">
+                </div>
+                <div class="footer-nav">
+                    <h4><a href="services.html" style="color: inherit; text-decoration: none;">Services</a></h4>
+                    <ul>
+                        <li><a href="marketing.html">Marketing</a></li>
+                        <li><a href="communications.html">Communications</a></li>
+                        <li><a href="crisis.html">Crisis Communications</a></li>
+                        <li><a href="interim.html">Interim Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="difference.html">The 50 Words Difference</a></li>
+                        <li><a href="people.html">Our People</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Phone: <a href="tel:6106315702">(610) 631-5702</a></p>
+                    <p>Email: <a href="mailto:info@50words.com">info@50words.com</a></p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/50-words-llc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 50 Words LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+
+        // Check scroll position on page load
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        }
+
+        // Full-Screen Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sideMenu = document.querySelector('.side-menu');
+        const sideMenuClose = document.querySelector('.side-menu-close');
+
+        function openMenu() {
+            sideMenu.classList.remove('closing');
+            sideMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sideMenu.classList.add('closing');
+            sideMenu.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                sideMenu.classList.remove('closing');
+                document.querySelectorAll('.has-submenu').forEach(el => el.classList.remove('open'));
+            }, 500);
+        }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', openMenu);
+        }
+
+        if (sideMenuClose) {
+            sideMenuClose.addEventListener('click', closeMenu);
+        }
+
+        // Search Toggle
+        const searchToggle = document.querySelector('.search-toggle');
+        const searchOverlay = document.querySelector('.search-overlay');
+        const searchClose = document.querySelector('.search-close');
+        const searchInput = document.querySelector('.search-input');
+
+        if (searchToggle) {
+            searchToggle.addEventListener('click', () => {
+                searchOverlay.classList.add('active');
+                if (searchInput) {
+                    searchInput.focus();
+                    searchInput.value = '';
+                    document.querySelector('.search-results').innerHTML = '';
+                }
+            });
+        }
+
+        if (searchClose) {
+            searchClose.addEventListener('click', () => {
+                searchOverlay.classList.remove('active');
+            });
+        }
+
+        // Site Search Data
+        const sitePages = [
+            { title: 'Home', url: 'index.html', keywords: 'home main strategy communications marketing' },
+            { title: 'The 50 Words Difference', url: 'difference.html', keywords: 'difference about strategy philosophy why work with us expertise solutions results' },
+            { title: 'What We Do - Services', url: 'services.html', keywords: 'services what we do offerings' },
+            { title: 'Marketing', url: 'marketing.html', keywords: 'marketing brand strategy sales branding identity web design social media' },
+            { title: 'Communications & Public Relations', url: 'communications.html', keywords: 'communications public relations PR media relations press corporate internal' },
+            { title: 'Crisis Communications', url: 'crisis.html', keywords: 'crisis communications emergency restructuring bankruptcy reputation management' },
+            { title: 'Interim Management', url: 'interim.html', keywords: 'interim management CMO CCO CBO fractional executive leadership' },
+            { title: 'Industries', url: 'industries.html', keywords: 'industries sectors markets' },
+            { title: 'Consumer Products and Services', url: 'industry-consumer.html', keywords: 'consumer products services retail hospitality' },
+            { title: 'Defense', url: 'industry-defense.html', keywords: 'defense military aerospace government' },
+            { title: 'Distribution', url: 'industry-distribution.html', keywords: 'distribution logistics supply chain' },
+            { title: 'Education', url: 'industry-education.html', keywords: 'education schools universities higher ed' },
+            { title: 'Financial Services', url: 'industry-financial.html', keywords: 'financial services banking finance lending investment' },
+            { title: 'Healthcare', url: 'industry-healthcare.html', keywords: 'healthcare medical hospital health care providers' },
+            { title: 'Manufacturing', url: 'industry-manufacturing.html', keywords: 'manufacturing industrial production' },
+            { title: 'Non-Profit', url: 'industry-nonprofit.html', keywords: 'non-profit nonprofit charity foundation' },
+            { title: 'Professional and Business Services', url: 'industry-professional.html', keywords: 'professional services business consulting law accounting' },
+            { title: 'Private Equity', url: 'industry-privateequity.html', keywords: 'private equity PE investment portfolio companies' },
+            { title: 'Technology', url: 'industry-technology.html', keywords: 'technology tech software IT digital' },
+            { title: 'Trade Associations', url: 'industry-trade.html', keywords: 'trade associations membership organizations' },
+            { title: 'Our People', url: 'people.html', keywords: 'people team staff bios Linda Emily Jackie Tiffany Colin Lisa Diane' },
+            { title: 'Contact Us', url: 'contact.html', keywords: 'contact email phone address get in touch' }
+        ];
+
+        // Search functionality
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                const resultsContainer = document.querySelector('.search-results');
+                
+                if (query.length < 2) {
+                    resultsContainer.innerHTML = '';
+                    return;
+                }
+
+                const matches = sitePages.filter(page => 
+                    page.title.toLowerCase().includes(query) || 
+                    page.keywords.toLowerCase().includes(query)
+                );
+
+                if (matches.length > 0) {
+                    resultsContainer.innerHTML = matches.map(page => 
+                        `<a href="${page.url}" class="search-result-item">${page.title}</a>`
+                    ).join('');
+                } else {
+                    resultsContainer.innerHTML = '<div class="search-no-results">No results found</div>';
+                }
+            });
+
+            // Enter key to go to first result
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const firstResult = document.querySelector('.search-result-item');
+                    if (firstResult) {
+                        window.location.href = firstResult.getAttribute('href');
+                    }
+                }
+            });
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (searchOverlay) searchOverlay.classList.remove('active');
+                if (sideMenu && sideMenu.classList.contains('active')) {
+                    closeMenu();
+                }
+            }
+        });
+
+        // Submenu toggle
+        document.querySelectorAll('.has-submenu > a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                link.parentElement.classList.toggle('open');
+            });
+        });
+
+        // Staggered fade-in for team cards
+        const teamCards = document.querySelectorAll('.team-card-new');
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    const card = entry.target;
+                    const cardIndex = Array.from(teamCards).indexOf(card);
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, cardIndex * 150); // 150ms delay between each card
+                    cardObserver.unobserve(card);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        teamCards.forEach(card => cardObserver.observe(card));
+
+        // Force autoplay all videos (especially for mobile)
+        function forcePlayVideos() {
+            document.querySelectorAll('video').forEach(v => {
+                v.play().catch(() => {});
+            });
+        }
+        forcePlayVideos();
+        document.addEventListener('touchstart', forcePlayVideos, { once: true });
+        document.addEventListener('scroll', forcePlayVideos, { once: true });
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) forcePlayVideos();
+        });
+    </script>
+</body>
+</html>

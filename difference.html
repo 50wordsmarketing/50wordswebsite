@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 50 Words Difference | 50 Words</title>
+    <meta name="description" content="Strategy is at the core of everything we do. 50 Words combines strategy and creativity to achieve a higher return on your investment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+            overflow-x: hidden;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .mobile-br {
+            display: none;
+        }
+        .fade-in-delay-1 { transition-delay: 0.1s; }
+        .fade-in-delay-2 { transition-delay: 0.25s; }
+        .fade-in-delay-3 { transition-delay: 0.4s; }
+        .fade-in-delay-4 { transition-delay: 0.55s; }
+        .fade-in-delay-5 { transition-delay: 0.7s; }
+        .fade-in-delay-6 { transition-delay: 0.85s; }
+
+        /* ==========================================
+           MOBILE RESPONSIVE - PHONE ONLY
+           ========================================== */
+        @media (max-width: 480px) {
+            /* Header */
+            .page-header.difference-header {
+                padding: 120px 24px 80px 24px !important;
+                min-height: 100vh;
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .page-header h1 {
+                font-size: 28px !important;
+            }
+            .people-tagline {
+                font-size: 14px !important;
+            }
+
+            /* Container */
+            .container {
+                padding: 0 20px !important;
+            }
+
+            /* Our Difference white card */
+            #who-we-are {
+                padding: 12px 12px !important;
+            }
+            #who-we-are .container {
+                padding: 40px 35px !important;
+                border-radius: 16px !important;
+                max-width: 100% !important;
+                text-align: left !important;
+            }
+            .section-headline {
+                font-size: 26px !important;
+            }
+            .section-headline .desktop-br {
+                display: none !important;
+            }
+            .section-text {
+                font-size: 15px !important;
+            }
+
+            /* Our Clients */
+            .page-section-headline {
+                font-size: 24px !important;
+                margin-bottom: 32px !important;
+            }
+            /* Our Clients section padding */
+            .page-section[style*="padding: 120px 0"] {
+                padding: 50px 0 !important;
+            }
+            /* Our Clients grid - 2 columns */
+            .page-section .container > div[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 16px !important;
+                row-gap: 8px !important;
+            }
+            .page-section .container > div[style*="grid-template-columns: repeat(3"] > div {
+                padding: 12px 8px !important;
+            }
+            .page-section .container > div[style*="grid-template-columns: repeat(3"] div[style*="width: 140px"] {
+                width: 100px !important;
+                height: 100px !important;
+                border-radius: 18px !important;
+            }
+            .page-section .container > div[style*="grid-template-columns: repeat(3"] img {
+                width: 65px !important;
+                height: 65px !important;
+            }
+            .page-section .container > div[style*="grid-template-columns: repeat(3"] h4 {
+                font-size: 14px !important;
+            }
+
+            /* Why Work With Us */
+            .page-section:has(.diff-why-work-grid) {
+                padding-top: 50px !important;
+                padding-bottom: 30px !important;
+            }
+            .diff-why-work-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+
+            /* Our Services dark container */
+            .page-section[style*="padding: 20px 5px"] {
+                padding: 12px 12px !important;
+            }
+            .page-section > .container[style*="padding: 100px 80px"] {
+                padding: 50px 24px 30px !important;
+                border-radius: 16px !important;
+                max-width: 100% !important;
+            }
+            .page-section > .container[style*="padding: 100px 80px"] > div {
+                text-align: center !important;
+            }
+            .page-section > .container[style*="padding: 100px 80px"] br {
+                display: none;
+            }
+            /* Services 4-col grid to 1 column */
+            div[style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: 1fr !important;
+                gap: 18px !important;
+            }
+            div[style*="grid-template-columns: repeat(4, 1fr)"] .services-card {
+                padding: 20px 16px !important;
+            }
+            div[style*="grid-template-columns: repeat(4, 1fr)"] .services-card .icon-container {
+                margin-bottom: 14px !important;
+            }
+            div[style*="grid-template-columns: repeat(4, 1fr)"] .services-card h3 {
+                margin-bottom: 6px !important;
+                font-size: 18px !important;
+            }
+            div[style*="grid-template-columns: repeat(4, 1fr)"] .services-card p {
+                margin-bottom: 16px !important;
+                font-size: 14px !important;
+            }
+
+            /* Our Advantage - stack */
+            .page-section[style*="position: sticky"] {
+                padding-top: 40px !important;
+                padding-left: 24px !important;
+                padding-right: 24px !important;
+                padding-bottom: 45px !important;
+            }
+            .page-section > .container > div[style*="grid-template-columns: 1.3fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 32px !important;
+            }
+            .page-section > .container > div[style*="grid-template-columns: 1.3fr 1fr"] > div:last-child {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                height: 300px !important;
+            }
+            .page-section > .container > div[style*="grid-template-columns: 1.3fr 1fr"] > div:last-child img {
+                border-radius: 16px !important;
+                height: 100% !important;
+                width: 100% !important;
+                object-fit: cover !important;
+            }
+
+            /* Philosophy */
+            .philosophy-section {
+                min-height: auto !important;
+                padding: 60px 0 !important;
+            }
+            .philosophy-section .container {
+                padding: 0 32px !important;
+            }
+            .philosophy-section h3 {
+                font-size: 32px !important;
+            }
+            .philosophy-section p {
+                font-size: 15px !important;
+            }
+
+            /* CTA */
+            .cta-section {
+                padding: 10px 5px !important;
+            }
+            .cta-section .container {
+                padding: 35px 24px !important;
+                border-radius: 16px !important;
+            }
+            .cta-content h2 {
+                font-size: 28px !important;
+            }
+            .cta-content p {
+                font-size: 14px !important;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 50px 0 30px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+                gap: 28px !important;
+                text-align: center;
+            }
+            .footer-brand {
+                text-align: center;
+            }
+            .footer-social {
+                justify-content: center;
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo-white.png" alt="50 Words" class="logo-white">
+                <img src="logo-color.png" alt="50 Words" class="logo-color">
+            </a>
+            <div class="nav-right">
+                <button class="search-toggle" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="menu-label">Menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-container">
+            <button class="search-close" aria-label="Close search">×</button>
+            <input type="text" class="search-input" placeholder="Search..." autocomplete="off">
+            <div class="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Side Menu -->
+    <div class="side-menu">
+        <div class="side-menu-content">
+            <button class="side-menu-close" aria-label="Close menu">×</button>
+            <ul class="side-menu-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="difference.html">The 50 Words Difference</a></li>
+                <li class="has-submenu">
+                    <a href="services.html">What We Do</a>
+                    <ul class="submenu">
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="marketing.html">Marketing</a></li>
+                        <li><a href="communications.html">Communications & PR</a></li>
+                        <li><a href="crisis.html">Crisis Communications</a></li>
+                        <li><a href="interim.html">Interim Management</a></li>
+                    </ul>
+                </li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="people.html">Our People</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-overlay"></div>
+
+    <!-- Page Header -->
+    <header class="page-header difference-header" style="padding: 240px 80px 200px 80px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); position: relative; overflow: hidden; text-align: center;">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.25; z-index: 0;">
+            <source src="_Images/Chess_Piece_compressed.mp4" type="video/mp4">
+        </video>
+        <!-- Red gradient overlay -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 800px 600px at 90% 20%, rgba(196, 30, 58, 0.35) 0%, transparent 50%), radial-gradient(ellipse 700px 700px at 10% 80%, rgba(196, 30, 58, 0.25) 0%, transparent 50%), radial-gradient(ellipse 900px 500px at 50% 50%, rgba(196, 30, 58, 0.20) 0%, transparent 60%); filter: blur(60px); animation: floatGradients 25s ease-in-out infinite; pointer-events: none; z-index: 0;"></div>
+        <!-- Gradient fade to black at bottom -->
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 250px; background: linear-gradient(to bottom, transparent, #0a0a0a); z-index: 1;"></div>
+        <div style="position: relative; z-index: 1;">
+            <h1 style="color: var(--white);">The 50 Words Difference</h1>
+            <p class="people-tagline">STRATEGY IS <strong>EVERYTHING</strong></p>
+        </div>
+    </header>
+
+    <!-- Our Difference & Our Clients Combined Background -->
+    <div style="background: #0a0a0a; position: relative;">
+        <!-- Pure black area at top for smooth transition -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 150px; background: #0a0a0a; z-index: 2;"></div>
+        <!-- Background Gradient Effect (starts lower) -->
+        <div style="position: absolute; top: 80px; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 800px 600px at 10% 20%, rgba(196, 30, 58, 0.35) 0%, transparent 50%), radial-gradient(ellipse 700px 700px at 90% 80%, rgba(196, 30, 58, 0.25) 0%, transparent 50%), radial-gradient(ellipse 900px 500px at 50% 50%, rgba(196, 30, 58, 0.20) 0%, transparent 60%); filter: blur(60px); animation: floatGradients 25s ease-in-out infinite; pointer-events: none; z-index: 0;"></div>
+        <!-- Fade from pure black to red gradients -->
+        <div style="position: absolute; top: 80px; left: 0; right: 0; height: 200px; background: linear-gradient(to bottom, var(--brand-dark), transparent); z-index: 1; pointer-events: none;"></div>
+        
+        <!-- Who We Are Section -->
+        <section class="content-section" id="who-we-are" style="padding: 20px 5px; position: relative; z-index: 2;">
+            <div class="container" style="background: white; border-radius: 24px; padding: 80px 60px; position: relative; overflow: hidden; max-width: 97%; margin: 0 auto; text-align: center;">
+                <h2 class="section-label fade-in">Our Difference</h2>
+                <h3 class="section-headline fade-in">Strategy is at the Core of <br class="desktop-br">Everything We Do</h3>
+                <p class="section-text fade-in" style="max-width: 820px; margin-left: auto; margin-right: auto; margin-bottom: 16px;">Without strategy, chances are you are engaging in sales, marketing and communication activities that may not be aligned with your business goals or current situation. That results in inconsistent brand messages, inefficient use of resources, and possible brand damage in a crisis situation.</p>
+                <p class="section-text fade-in" style="margin-bottom: 0; max-width: 820px; margin-left: auto; margin-right: auto;">50 Words combines strategy and creativity to achieve a higher return on your investment in us, whether we're mitigating damage, improving your public image, or boosting sales.</p>
+            </div>
+        </section>
+
+        <!-- Our Clients -->
+        <section class="page-section" style="position: relative; z-index: 1; padding: 120px 0;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+                <h2 class="section-label fade-in" style="color: var(--brand-red); margin-bottom: 20px;">Our Clients</h2>
+                <h3 class="page-section-headline fade-in" style="color: var(--white); font-size: 44px; line-height: 1.2; margin-bottom: 60px;">We serve as an invaluable partner to:</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 32px; row-gap: 12px;">
+                    <div class="fade-in fade-in-delay-1" style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 36px 24px;">
+                        <div style="width: 140px; height: 140px; background: var(--brand-red); border-radius: 24px; display: flex; align-items: center; justify-content: center;">
+                            <img src="_Images/_OurClientsIcons/Boards.png" alt="Boards" style="width: 105px; height: 105px; object-fit: contain;">
+                        </div>
+                        <h4 style="color: rgba(255, 255, 255, 0.95); font-size: 18px; font-weight: 600; margin: 0; font-family: 'Inter', sans-serif;">Boards</h4>
+                    </div>
+                    <div class="fade-in fade-in-delay-2" style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 36px 24px;">
+                        <div style="width: 140px; height: 140px; background: var(--brand-red); border-radius: 24px; display: flex; align-items: center; justify-content: center;">
+                            <img src="_Images/_OurClientsIcons/Marketing.png" alt="Marketing" style="width: 90px; height: 90px; object-fit: contain;">
+                        </div>
+                        <h4 style="color: rgba(255, 255, 255, 0.95); font-size: 18px; font-weight: 600; margin: 0; font-family: 'Inter', sans-serif;">Marketing, Communications<br>&amp; IR Executives</h4>
+                    </div>
+                    <div class="fade-in fade-in-delay-3" style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 36px 24px;">
+                        <div style="width: 140px; height: 140px; background: var(--brand-red); border-radius: 24px; display: flex; align-items: center; justify-content: center;">
+                            <img src="_Images/_OurClientsIcons/C-suite.png" alt="C-Suite Leaders" style="width: 75px; height: 75px; object-fit: contain;">
+                        </div>
+                        <h4 style="color: rgba(255, 255, 255, 0.95); font-size: 18px; font-weight: 600; margin: 0; font-family: 'Inter', sans-serif;">C-Suite Leaders</h4>
+                    </div>
+                    <div class="fade-in fade-in-delay-4" style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 36px 24px;">
+                        <div style="width: 140px; height: 140px; background: var(--brand-red); border-radius: 24px; display: flex; align-items: center; justify-content: center;">
+                            <img src="_Images/_OurClientsIcons/Lenders.png" alt="Lenders & Banks" style="width: 90px; height: 90px; object-fit: contain;">
+                        </div>
+                        <h4 style="color: rgba(255, 255, 255, 0.95); font-size: 18px; font-weight: 600; margin: 0; font-family: 'Inter', sans-serif;">Lenders & Banks</h4>
+                    </div>
+                    <div class="fade-in fade-in-delay-5" style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 36px 24px;">
+                        <div style="width: 140px; height: 140px; background: var(--brand-red); border-radius: 24px; display: flex; align-items: center; justify-content: center;">
+                            <img src="_Images/_OurClientsIcons/PrivateEquity.png" alt="Private Equity" style="width: 90px; height: 90px; object-fit: contain;">
+                        </div>
+                        <h4 style="color: rgba(255, 255, 255, 0.95); font-size: 18px; font-weight: 600; margin: 0; font-family: 'Inter', sans-serif;">Private Equity Owners<br>&amp; Portfolio Companies</h4>
+                    </div>
+                    <div class="fade-in fade-in-delay-6" style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 36px 24px;">
+                        <div style="width: 140px; height: 140px; background: var(--brand-red); border-radius: 24px; display: flex; align-items: center; justify-content: center;">
+                            <img src="_Images/_OurClientsIcons/Investors.png" alt="Investors" style="width: 90px; height: 90px; object-fit: contain;">
+                        </div>
+                        <h4 style="color: rgba(255, 255, 255, 0.95); font-size: 18px; font-weight: 600; margin: 0; font-family: 'Inter', sans-serif;">Investors</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Why Work With 50 Words -->
+    <section class="page-section">
+        <div class="container">
+            <h2 class="section-label center fade-in">Why Work With 50 Words?</h2>
+            <div class="diff-why-work-grid">
+                <div class="diff-why-work-card fade-in">
+                    <div class="why-work-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Deep Expertise</h3>
+                    <p>Our team of seasoned professionals takes the time to understand the unique goals of each client we serve.</p>
+                </div>
+                <div class="diff-why-work-card fade-in">
+                    <div class="why-work-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Bespoke Solutions</h3>
+                    <p>We tailor our service offering to meet your specific circumstances and needs.</p>
+                </div>
+                <div class="diff-why-work-card fade-in">
+                    <div class="why-work-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3>Proven Results</h3>
+                    <p>Our strategies have helped over 125+ organizations succeed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="page-section" style="background: white; padding: 20px 5px;">
+        <div class="container" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); border-radius: 24px; padding: 100px 80px; position: relative; overflow: hidden; max-width: 97%; margin: 0 auto;">
+            <div style="position: relative; z-index: 1; text-align: center;">
+                <h2 class="section-label fade-in" style="color: var(--brand-red);">Our Services</h2>
+                <h3 class="page-section-headline fade-in" style="color: var(--white); margin-bottom: 60px;">We address real-time business needs,<br>every stakeholder and every situation,<br>through customized services <span class="mobile-br"></span>in four key disciplines:</h3>
+                
+                <!-- Services Grid -->
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; align-items: stretch;">
+                    <!-- Marketing -->
+                    <div class="services-card fade-in" style="display: flex; flex-direction: column;">
+                        <div class="icon-container">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c41e3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 11l18-5v12L3 14v-3z"/>
+                                <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+                            </svg>
+                        </div>
+                        <h3><a href="marketing.html">Marketing</a></h3>
+                        <p style="margin-bottom: 32px;">Strategic marketing solutions to elevate your brand and drive measurable growth.</p>
+                        <a href="marketing.html" style="display: inline-block; background: var(--brand-red); color: white; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; font-family: 'Inter', sans-serif; margin-top: auto; transition: background 0.3s ease; text-align: center; align-self: center;">Learn More &rarr;</a>
+                    </div>
+                    <!-- Communications & PR -->
+                    <div class="services-card fade-in" style="display: flex; flex-direction: column;">
+                        <div class="icon-container">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c41e3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <h3><a href="communications.html">Communications & <br>Public Relations</a></h3>
+                        <p style="margin-bottom: 32px;">Expert media relations and strategic communications to shape your narrative.</p>
+                        <a href="communications.html" style="display: inline-block; background: var(--brand-red); color: white; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; font-family: 'Inter', sans-serif; margin-top: auto; transition: background 0.3s ease; text-align: center; align-self: center;">Learn More &rarr;</a>
+                    </div>
+                    <!-- Crisis Communications -->
+                    <div class="services-card fade-in" style="display: flex; flex-direction: column;">
+                        <div class="icon-container">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c41e3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                <line x1="12" y1="9" x2="12" y2="13"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3><a href="crisis.html">Crisis Communications</a></h3>
+                        <p style="margin-bottom: 32px;">Navigate challenging situations with confidence and protect your reputation.</p>
+                        <a href="crisis.html" style="display: inline-block; background: var(--brand-red); color: white; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; font-family: 'Inter', sans-serif; margin-top: auto; transition: background 0.3s ease; text-align: center; align-self: center;">Learn More &rarr;</a>
+                    </div>
+                    <!-- Interim Management -->
+                    <div class="services-card fade-in" style="display: flex; flex-direction: column;">
+                        <div class="icon-container">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c41e3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="8.5" cy="7" r="4"/>
+                                <polyline points="17 11 19 13 23 9"/>
+                            </svg>
+                        </div>
+                        <h3><a href="interim.html">Interim Management</a></h3>
+                        <p style="margin-bottom: 32px;">Experienced leadership to guide your team through transitions and change.</p>
+                        <a href="interim.html" style="display: inline-block; background: var(--brand-red); color: white; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; font-family: 'Inter', sans-serif; margin-top: auto; transition: background 0.3s ease; text-align: center; align-self: center;">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Advantage -->
+    <section class="page-section" style="position: sticky; top: 0; z-index: 1001; background: white; padding-bottom: 120px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: stretch;">
+                <div>
+                    <h2 class="section-label fade-in">Our Advantage</h2>
+                    <h3 class="page-section-headline fade-in" style="text-align: left;"><span class="number-ticker" data-target="40">0</span>+ years of hands-on experience.</h3>
+                    <div class="fade-in">
+                        <p class="section-text">Our multidisciplinary team brings a depth of insight that few consultative partners can match. We bring decades of working as operating executives and advisors in health care, financial services, technology, education, professional services and other organizations, giving us a nuanced understanding of a wide variety of industries.</p>
+                        <p class="section-text" style="margin-bottom: 0;">This long-term perspective allows us to recognize patterns, anticipate challenges and opportunities, and deliver strategies and implementation plans grounded in real-world impact, not theory.</p>
+                    </div>
+                </div>
+                <div class="fade-in" style="height: 100%;">
+                    <img src="_Images/50Words_Zoom2.jpg" alt="50 Words team" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1002;">
+        <div class="container" style="max-width: 900px; text-align: center; position: relative; z-index: 1;">
+            <h2 class="section-label fade-in" style="color: var(--brand-red);">Our Philosophy</h2>
+            <h3 class="fade-in" style="color: var(--white); font-size: 48px; font-weight: 600; margin-bottom: 32px; font-family: 'Playfair Display', serif;">Less <span style="font-style: italic;">is more.</span></h3>
+            <p class="fade-in" style="color: rgba(255, 255, 255, 0.9); font-size: 18px; line-height: 1.8; margin-bottom: 24px;">50 Words was inspired by the story behind "Green Eggs and Ham," a feat of creativity and constraint that results in simple, memorable communications and universal understanding. Dr. Seuss (Theodore Geisel) was challenged by his publisher to write an entire children's book using only 50 unique words, resulting in one of history's best-selling children's books.</p>
+            <p class="fade-in" style="color: rgba(255, 255, 255, 0.9); font-size: 18px; line-height: 1.8; margin-bottom: 40px;">Like Dr. Seuss, we believe business communication should be simple, giving you the ability to do much more—with less.</p>
+            <div class="fade-in" style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 40px; margin-top: 40px;">
+                <p style="color: rgba(255, 255, 255, 0.5); font-size: 15px; line-height: 1.8;"><strong style="color: var(--brand-red);">For the curious, Dr. Seuss's 50 words were:</strong> a, am, and, any, anywhere, are, be, boat, box, car, could, dark, do, eat, eggs, fox, goat, good, green, ham, here, house, I, if, in, let, like, may, me, mouse, not, on, or, rain, Sam, say, see, so, thank, that, them, there, they, train, tree, try, will, with, would, you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="position: relative; z-index: 1003; background: white;">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="fade-in">Ready to get started?</h2>
+                <p class="fade-in">Let's have a conversation about your communications and marketing opportunities and goals.</p>
+                <a href="contact.html" class="cta-button fade-in">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="position: relative; z-index: 1004;">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo-white.png" alt="50 Words" class="footer-logo">
+                </div>
+                <div class="footer-nav">
+                    <h4><a href="services.html" style="color: inherit; text-decoration: none;">Services</a></h4>
+                    <ul>
+                        <li><a href="marketing.html">Marketing</a></li>
+                        <li><a href="communications.html">Communications</a></li>
+                        <li><a href="crisis.html">Crisis Communications</a></li>
+                        <li><a href="interim.html">Interim Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="difference.html">The 50 Words Difference</a></li>
+                        <li><a href="people.html">Our People</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Phone: <a href="tel:6106315702">(610) 631-5702</a></p>
+                    <p>Email: <a href="mailto:info@50words.com">info@50words.com</a></p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/50-words-llc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 50 Words LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Check scroll position on page load
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        }
+
+        // Full-Screen Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sideMenu = document.querySelector('.side-menu');
+        const sideMenuClose = document.querySelector('.side-menu-close');
+
+        function openMenu() {
+            sideMenu.classList.remove('closing');
+            sideMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sideMenu.classList.add('closing');
+            sideMenu.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                sideMenu.classList.remove('closing');
+                document.querySelectorAll('.has-submenu').forEach(el => el.classList.remove('open'));
+            }, 500);
+        }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', openMenu);
+        }
+
+        if (sideMenuClose) {
+            sideMenuClose.addEventListener('click', closeMenu);
+        }
+
+        // Search Toggle
+        const searchToggle = document.querySelector('.search-toggle');
+        const searchOverlay = document.querySelector('.search-overlay');
+        const searchClose = document.querySelector('.search-close');
+        const searchInput = document.querySelector('.search-input');
+
+        if (searchToggle) {
+            searchToggle.addEventListener('click', () => {
+                searchOverlay.classList.add('active');
+                if (searchInput) {
+                    searchInput.focus();
+                    searchInput.value = '';
+                    document.querySelector('.search-results').innerHTML = '';
+                }
+            });
+        }
+
+        if (searchClose) {
+            searchClose.addEventListener('click', () => {
+                searchOverlay.classList.remove('active');
+            });
+        }
+
+        // Site Search Data
+        const sitePages = [
+            { title: 'Home', url: 'index.html', keywords: 'home main strategy communications marketing' },
+            { title: 'The 50 Words Difference', url: 'difference.html', keywords: 'difference about strategy philosophy why work with us expertise solutions results' },
+            { title: 'What We Do - Services', url: 'services.html', keywords: 'services what we do offerings' },
+            { title: 'Marketing', url: 'marketing.html', keywords: 'marketing brand strategy sales branding identity web design social media' },
+            { title: 'Communications & Public Relations', url: 'communications.html', keywords: 'communications public relations PR media relations press corporate internal' },
+            { title: 'Crisis Communications', url: 'crisis.html', keywords: 'crisis communications emergency restructuring bankruptcy reputation management' },
+            { title: 'Interim Management', url: 'interim.html', keywords: 'interim management CMO CCO CBO fractional executive leadership' },
+            { title: 'Industries', url: 'industries.html', keywords: 'industries sectors markets' },
+            { title: 'Consumer Products and Services', url: 'industry-consumer.html', keywords: 'consumer products services retail hospitality' },
+            { title: 'Defense', url: 'industry-defense.html', keywords: 'defense military aerospace government' },
+            { title: 'Distribution', url: 'industry-distribution.html', keywords: 'distribution logistics supply chain' },
+            { title: 'Education', url: 'industry-education.html', keywords: 'education schools universities higher ed' },
+            { title: 'Financial Services', url: 'industry-financial.html', keywords: 'financial services banking finance lending investment' },
+            { title: 'Healthcare', url: 'industry-healthcare.html', keywords: 'healthcare medical hospital health care providers' },
+            { title: 'Manufacturing', url: 'industry-manufacturing.html', keywords: 'manufacturing industrial production' },
+            { title: 'Non-Profit', url: 'industry-nonprofit.html', keywords: 'non-profit nonprofit charity foundation' },
+            { title: 'Professional and Business Services', url: 'industry-professional.html', keywords: 'professional services business consulting law accounting' },
+            { title: 'Private Equity', url: 'industry-privateequity.html', keywords: 'private equity PE investment portfolio companies' },
+            { title: 'Technology', url: 'industry-technology.html', keywords: 'technology tech software IT digital' },
+            { title: 'Trade Associations', url: 'industry-trade.html', keywords: 'trade associations membership organizations' },
+            { title: 'Our People', url: 'people.html', keywords: 'people team staff bios Linda Emily Jackie Tiffany Colin Lisa Diane' },
+            { title: 'Contact Us', url: 'contact.html', keywords: 'contact email phone address get in touch' }
+        ];
+
+        // Search functionality
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                const resultsContainer = document.querySelector('.search-results');
+                
+                if (query.length < 2) {
+                    resultsContainer.innerHTML = '';
+                    return;
+                }
+
+                const matches = sitePages.filter(page => 
+                    page.title.toLowerCase().includes(query) || 
+                    page.keywords.toLowerCase().includes(query)
+                );
+
+                if (matches.length > 0) {
+                    resultsContainer.innerHTML = matches.map(page => 
+                        `<a href="${page.url}" class="search-result-item">${page.title}</a>`
+                    ).join('');
+                } else {
+                    resultsContainer.innerHTML = '<div class="search-no-results">No results found</div>';
+                }
+            });
+
+            // Enter key to go to first result
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const firstResult = document.querySelector('.search-result-item');
+                    if (firstResult) {
+                        window.location.href = firstResult.getAttribute('href');
+                    }
+                }
+            });
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (searchOverlay) searchOverlay.classList.remove('active');
+                if (sideMenu && sideMenu.classList.contains('active')) {
+                    closeMenu();
+                }
+            }
+        });
+
+        // Submenu toggle
+        document.querySelectorAll('.has-submenu > a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                link.parentElement.classList.toggle('open');
+            });
+        });
+
+        // Fade-in animation on scroll
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            fadeInObserver.observe(el);
+        });
+
+        // Number ticker animation
+        const numberTickers = document.querySelectorAll('.number-ticker');
+        const tickerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    const duration = 2000; // 2 seconds
+                    const step = target / (duration / 16); // 60fps
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            entry.target.textContent = target;
+                            clearInterval(timer);
+                        } else {
+                            entry.target.textContent = Math.floor(current);
+                        }
+                    }, 16);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        numberTickers.forEach(ticker => tickerObserver.observe(ticker));
+
+        // Force autoplay all videos (especially for mobile)
+        function forcePlayVideos() {
+            document.querySelectorAll('video').forEach(v => {
+                v.play().catch(() => {});
+            });
+        }
+        forcePlayVideos();
+        document.addEventListener('touchstart', forcePlayVideos, { once: true });
+        document.addEventListener('scroll', forcePlayVideos, { once: true });
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) forcePlayVideos();
+        });
+    </script>
+</body>
+</html>
